@@ -20,5 +20,11 @@ pipeline {
 
             }
         }
+        stage('Notification') {
+            steps {
+                echo 'Sending Email....'
+              mail bcc: '', body: 'Build Completed', cc: '', from: '', replyTo: '', subject: '[Jenkin Pipeline]Build Completed', to: 'stanltam@gmail.com'
+            }
+        }		
     }
 }
