@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'checking out source..'
 				checkout scm
+				sh 'chmod 770 build.sh'
 				sh './build.sh'
             }
         }
