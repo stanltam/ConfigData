@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'checking out source..'
 				checkout scm
+				sh './build.sh'
             }
         }
         stage('Test') {
